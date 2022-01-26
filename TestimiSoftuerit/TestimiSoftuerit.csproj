@@ -37,12 +37,29 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="nunit.framework, Version=3.13.2.0, Culture=neutral, PublicKeyToken=2638cd05610744eb, processorArchitecture=MSIL">
-      <HintPath>..\packages\NUnit.3.13.2\lib\net45\nunit.framework.dll</HintPath>
+    <Reference Include="nunit.core, Version=2.6.4.14350, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
+      <HintPath>..\packages\NUnitTestAdapter.WithFramework.2.0.0\lib\nunit.core.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="nunit.core.interfaces, Version=2.6.4.14350, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
+      <HintPath>..\packages\NUnitTestAdapter.WithFramework.2.0.0\lib\nunit.core.interfaces.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="nunit.framework, Version=2.6.4.14350, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
+      <HintPath>..\packages\NUnitTestAdapter.WithFramework.2.0.0\lib\nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.util, Version=2.6.4.14350, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
+      <HintPath>..\packages\NUnitTestAdapter.WithFramework.2.0.0\lib\nunit.util.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="NUnit.VisualStudio.TestAdapter, Version=2.0.0.0, Culture=neutral, PublicKeyToken=4cb40d35494691ac, processorArchitecture=MSIL">
+      <HintPath>..\packages\NUnitTestAdapter.WithFramework.2.0.0\lib\NUnit.VisualStudio.TestAdapter.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="OpenQA.Selenium.Awesome, Version=1.0.0.3, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Selenium.WebDriver.Awesome.1.0.0.3\lib\net40\OpenQA.Selenium.Awesome.dll</HintPath>
     </Reference>
+    <Reference Include="PresentationCore" />
     <Reference Include="SeleniumExtras.WaitHelpers, Version=3.11.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\DotNetSeleniumExtras.WaitHelpers.3.11.0\lib\net45\SeleniumExtras.WaitHelpers.dll</HintPath>
     </Reference>
@@ -65,21 +82,34 @@
   <ItemGroup>
     <Compile Include="BrowserActions.cs" />
     <Compile Include="Config.cs" />
+    <Compile Include="Culi\TS7LAN.cs" />
     <Compile Include="Driver.cs" />
+    <Compile Include="Experiment\Brave.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Scenarios\TS10TestEdito.cs" />
+    <Compile Include="Scenarios\TS11TestimiPhoto.cs" />
+    <Compile Include="Scenarios\TS15TestimiFiltrim.cs" />
     <Compile Include="Scenarios\TS1Filtrimi.cs" />
     <Compile Include="Scenarios\TS2TestimiSearch.cs" />
     <Compile Include="Scenarios\TS3TestimiFaqeve.cs" />
+    <Compile Include="Scenarios\TS4TestimiAdd.cs" />
     <Compile Include="Scenarios\TS5TestimiWindow.cs" />
     <Compile Include="Scenarios\TS6TestimiVideos.cs" />
     <Compile Include="Scenarios\TS7TestimiPagination.cs" />
     <Compile Include="Scenarios\TS8TestimiButonaveSh.cs" />
+    <Compile Include="Scenarios\TS9TestimiSearchTelegraf.cs" />
+    <Compile Include="Ushtrime\TS10LikeSave.cs" />
+    <Compile Include="Ushtrime\TS6Filtrimi.cs" />
+    <Compile Include="Ushtrime\TS7TestButtons.cs" />
+    <Compile Include="Ushtrime\TS8TestSearch.cs" />
+    <Compile Include="Ushtrime\TS9MinMAxWindow.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

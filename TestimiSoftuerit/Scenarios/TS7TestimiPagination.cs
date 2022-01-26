@@ -20,7 +20,7 @@ namespace TestimiSoftuerit.Scenarios
         public void TestMore()
         {
             Driver.driver.FindElement(By.ClassName("btn-meshume-fokusi")).Click();
-            Driver.WaitForElementUpTo();
+            System.Threading.Thread.Sleep(5000);
             IWebElement resultsContainer = Driver.driver.FindElement(By.XPath("/html/body/div[8]/div/div[1]/div[5]/div[2]"));
             IReadOnlyCollection<IWebElement> productTitles = resultsContainer.FindElements(By.ClassName("fokusArticle"));
             Assert.IsTrue(productTitles.Count > 17);
