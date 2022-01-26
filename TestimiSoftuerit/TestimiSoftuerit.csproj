@@ -89,6 +89,8 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Scenarios\TS10TestEdito.cs" />
     <Compile Include="Scenarios\TS11TestimiPhoto.cs" />
+    <Compile Include="Scenarios\TS13TestimiScroll.cs" />
+    <Compile Include="Scenarios\TS14StokCmimi.cs" />
     <Compile Include="Scenarios\TS15TestimiFiltrim.cs" />
     <Compile Include="Scenarios\TS1Filtrimi.cs" />
     <Compile Include="Scenarios\TS2TestimiSearch.cs" />
@@ -100,7 +102,7 @@
     <Compile Include="Scenarios\TS8TestimiButonaveSh.cs" />
     <Compile Include="Scenarios\TS9TestimiSearchTelegraf.cs" />
     <Compile Include="Ushtrime\TS10LikeSave.cs" />
-    <Compile Include="Ushtrime\TS6Filtrimi.cs" />
+    <Compile Include="Scenarios\TS12Filtrimi.cs" />
     <Compile Include="Ushtrime\TS7TestButtons.cs" />
     <Compile Include="Ushtrime\TS8TestSearch.cs" />
     <Compile Include="Ushtrime\TS9MinMAxWindow.cs" />

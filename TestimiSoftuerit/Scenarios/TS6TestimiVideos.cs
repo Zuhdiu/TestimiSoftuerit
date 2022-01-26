@@ -28,8 +28,8 @@ namespace TestimiSoftuerit.Scenarios
         [Test]
         public void TestPlayback()
         {            
-            IWebElement resultsContainer = Driver.driver.FindElement(By.XPath(" / html / body / div[8] / div / div"));
-            resultsContainer.FindElement(By.ClassName("videoIndicator")).Click();
+            //IWebElement resultsContainer = Driver.driver.FindElement(By.XPath(" / html / body / div[8] / div / div"));
+            //resultsContainer.FindElement(By.ClassName("videoIndicator")).Click();
             //Driver.WaitForElementUpTo();
             IWebElement resultsContainer2 = Driver.driver.FindElement(By.ClassName("article-container"));
             var videoSrc = resultsContainer2.FindElement(By.TagName("iframe"));

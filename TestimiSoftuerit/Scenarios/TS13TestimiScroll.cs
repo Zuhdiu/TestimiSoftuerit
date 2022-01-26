@@ -1,42 +1,24 @@
 ﻿using NUnit.Framework;
 using OpenQA.Selenium;
-using OpenQA.Selenium.Interactions;
-using OpenQA.Selenium.Support.UI;
 using System;
 using System.Collections.Generic;
-using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TestimiSoftuerit.Ushtrime
+namespace TestimiSoftuerit.Scenarios
 {
-    class TS9MinMAxWindow
+    class TS13TestimiScroll
     {
         [SetUp]
         public void Setup()
         {
             BrowserActions.InitializeDriver("https://dribbble.com/");
+
+            //Search
+           // BrowserActions.InitializeDriver("https://dribbble.com/search");
         }
 
-        [Test]
-        public void TestWindowMinimize()
-        {
-            Driver.driver.Manage().Window.Minimize();
-            var dm = Driver.driver.Manage().Window.Size;
-            int relativemaxheight = 744;
-            int relativemaxwidth = 1382;
-            Assert.IsTrue(dm.Height < relativemaxheight && dm.Width < relativemaxwidth);
-        }
-        [Test]
-        public void TestWindowMaximize()
-        {
-            Driver.driver.Manage().Window.Maximize();
-            var dm = Driver.driver.Manage().Window.Size;
-            int relativemaxheight = 744;
-            int relativemaxwidth = 1382;
-            Assert.IsTrue(dm.Height == relativemaxheight && dm.Width == relativemaxwidth);
-        }
 
         [Test]
         public void TestScroll()
@@ -59,6 +41,21 @@ namespace TestimiSoftuerit.Ushtrime
             js.ExecuteScript("window.scrollTo(0, 200)");
             var value = js.ExecuteScript("return window.pageYOffset;");
             Assert.IsTrue(value.ToString() == "200");
+        }
+
+        [Test]
+        public void SearchBanners()
+        {
+            IWebElement searchInput = Driver.driver.FindElement(By.Id("search"));
+            searchInput.SendKeys("Banners");
+            searchInput.SendKeys(Keys.Enter);
+
+            System.Threading.Thread.Sleep(5000);
+
+            IWebElement resultsContainer = Driver.driver.FindElement(By.Id("wrap-inner"));
+            IReadOnlyCollection<IWebElement> productTitles = resultsContainer.FindElements(By.ClassName("shot-thumbnail-container"));
+            Assert.IsTrue(productTitles.Count > 0);
+
         }
     }
 }

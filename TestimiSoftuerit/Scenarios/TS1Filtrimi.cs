@@ -28,8 +28,8 @@ namespace TestimiSoftuerit.Scenarios
             IReadOnlyCollection<IWebElement> productTitles = resultsContainer.FindElements(By.ClassName("product-list-item__content--title"));
             foreach (IWebElement title in productTitles)
             {
-                // string itemTitle = title.GetAttribute("text").ToLower();
-                Assert.IsTrue(title.Text.ToUpper().Contains("DELL"));
+                string itemTitle = title.Text;
+                Assert.IsTrue(title.Text.Contains("DELL"));
             }
         }
 

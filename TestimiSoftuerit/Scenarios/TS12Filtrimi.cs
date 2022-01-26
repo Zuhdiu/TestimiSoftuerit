@@ -6,9 +6,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TestimiSoftuerit.Ushtrime
+namespace TestimiSoftuerit.Scenarios
 {
-    class TS6Filtrimi
+    class TS12Filtrimi
     {
 
         [SetUp]

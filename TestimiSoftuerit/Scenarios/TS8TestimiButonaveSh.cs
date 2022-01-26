@@ -20,6 +20,16 @@ namespace TestimiSoftuerit.Scenarios
         {
             BrowserActions.InitializeDriver(url);
         }
+   
+
+        [Test, RequiresSTA]      
+        public void TestCopyLink()
+        {
+            IWebElement element1= Driver.driver.FindElement(By.ClassName("tooltip"));
+            element1.Click();
+            string pasteText = Clipboard.GetText();
+            Assert.IsTrue(url == pasteText);
+        }
 
         [Test]
         public void TestShareFB()
@@ -34,15 +44,6 @@ namespace TestimiSoftuerit.Scenarios
             IWebElement passlInput = Driver.driver.FindElement(By.Id("pass"));
             passlInput.SendKeys("Password");
             Driver.driver.FindElement(By.Name("login")).Click();
-        }
-
-        [Test, RequiresSTA]      
-        public void TestCopyLink()
-        {
-            IWebElement element1= Driver.driver.FindElement(By.ClassName("tooltip"));
-            element1.Click();
-            string pasteText = Clipboard.GetText();
-            Assert.IsTrue(url == pasteText);
         }
     }
 }
