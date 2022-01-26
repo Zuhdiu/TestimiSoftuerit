@@ -82,7 +82,6 @@
   <ItemGroup>
     <Compile Include="BrowserActions.cs" />
     <Compile Include="Config.cs" />
-    <Compile Include="Culi\TS7LAN.cs" />
     <Compile Include="Driver.cs" />
     <Compile Include="Experiment\Brave.cs" />
     <Compile Include="Program.cs" />
@@ -101,11 +100,7 @@
     <Compile Include="Scenarios\TS7TestimiPagination.cs" />
     <Compile Include="Scenarios\TS8TestimiButonaveSh.cs" />
     <Compile Include="Scenarios\TS9TestimiSearchTelegraf.cs" />
-    <Compile Include="Ushtrime\TS10LikeSave.cs" />
     <Compile Include="Scenarios\TS12Filtrimi.cs" />
-    <Compile Include="Ushtrime\TS7TestButtons.cs" />
-    <Compile Include="Ushtrime\TS8TestSearch.cs" />
-    <Compile Include="Ushtrime\TS9MinMAxWindow.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

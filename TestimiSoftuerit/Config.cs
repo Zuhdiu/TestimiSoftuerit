@@ -11,7 +11,7 @@ namespace TestimiSoftuerit
         public static string BaseUrl = "https://riinvest.net";
         public static string Gjirafa50Url = "https://gjirafa50.com";
         public static string AmazonURL = "https://amazon.com";
-        public static string password = "Zuhdi123.";
+        public static string password = "";
         public static string ScreenshotDir = @"C:\Users\arian\source\repos\SoftwareTestingWeek6Online\SoftwareTestingWeek6Online\Screenshots\";
 
         public static class AlertMessages
